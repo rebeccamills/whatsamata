@@ -1,0 +1,29 @@
+<h1>Rider issues</h1>
+ 
+ <%= link_to 'New issue', new_issue_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+     <th colspan="2"></th>
+  </tr>
+ 
+  <% @issues.each do |issue| %>
+    <tr>
+      <td><%= issue.title %></td>
+      <td><%= issue.text %></td>
+      <td><%= link_to 'Show', issue_path(issue) %></td>
+      <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
+      <td><%= link_to 'Destroy', issue_path(issue),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+
+
+
