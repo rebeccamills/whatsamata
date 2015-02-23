@@ -15,10 +15,56 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
+<h1>WhatsaMATA</h1>
+
+<p><%= link_to 'Submit a new issue', new_issue_path %></p>
+
+
+
+<%= form_tag("/submit", method: "get") do %>
+  <%= label_tag(:q, "Choose route:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+
+<form name="busroutes" action="http://www.mydomain.com/myformhandler.cgi" method="POST" id="search">
+<div align="center">
+<select name="buses">
+<option selected disabled>Choose Your Route</option>	
+<option value="55">55</option>
+<option value="80">80</option>
+<option value="X2">X2</option>
+</select>
+
+</div>
+
+<input type="submit" value="Submit">
+
+
+
+<p><form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
+<div align="center">
+<select name="mydropdown">
+<option selected disabled>Favorites</option>
+<option value="63">63</option>
+<option value="70">70</option>
+</select>
+</div>
+</form>
+
+<input type="submit" value="Submit">
+</p>
+
 <%= yield %>
+
+
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 </html>
+
 
 
 
