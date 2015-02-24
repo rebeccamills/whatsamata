@@ -15,35 +15,65 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
+<div class="banner">
+
 <h1>WhatsaMATA</h1>
-
-<p><%= link_to 'Submit a new issue', new_issue_path %></p>
-
-
-
-<%= form_tag("/submit", method: "get") do %>
-  <%= label_tag(:q, "Choose route:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Submit") %>
-<% end %>
-
-
-<form name="busroutes" action="http://www.mydomain.com/myformhandler.cgi" method="POST" id="search">
-<div align="center">
-<select name="buses">
-<option selected disabled>Choose Your Route</option>	
-<option value="55">55</option>
-<option value="80">80</option>
-<option value="X2">X2</option>
-</select>
 
 </div>
 
-<input type="submit" value="Submit">
+<p><%#= link_to 'Submit a new issue', new_issue_path %></p>
 
 
 
-<p><form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
+
+
+<!-- <form action="/issues" name="busroutes" method="POST" id="busroutes">
+	<div align="center">
+		<select name="buses" id="busdropdown">
+			<option selected disabled>Choose Your Route</option>	
+		</select>
+		<input type="submit" value="Submit" />
+	</div>
+</form> -->
+
+<%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
+	
+<select name="issue[buses]" id="busdropdown">
+			<option selected disabled>Choose Your Route</option>	
+		</select>
+  	<%= f.submit "Submit an issue" %>
+<% end %>
+
+
+
+
+<!-- <form name="busroutes" method="POST" id="busroutes">
+<div align="center">
+<select name="buses" id="busdropdown">
+<option selected disabled>Choose Your Route</option>	
+</select> -->
+
+
+
+<p><%#= form_for("/submit", method: "get") do %>
+<!-- <form name="favorites" action="http://www.mydomain.com/myformhandler.cgi" method="POST" id="favorites">
+<div align="center">
+<select name="favorites" id="favoritesdropdown">
+<option selected disabled>Favorites</option>	
+</select>
+  <%= submit_tag("Submit") %></p> -->
+<%# end %>
+</p>
+
+
+
+
+
+<!-- <button value="Submit">Submit</button> -->
+
+
+
+<!-- <p><form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST">
 <div align="center">
 <select name="mydropdown">
 <option selected disabled>Favorites</option>
@@ -53,8 +83,8 @@
 </div>
 </form>
 
-<input type="submit" value="Submit">
-</p>
+<button value="Submit">Submit</button>
+</p> -->
 
 <%= yield %>
 

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'issues#index'
   devise_for :users
   get 'welcome/index'
   resources :issues
+
 
 
 
@@ -11,6 +12,13 @@ Rails.application.routes.draw do
 
   resources :users do
   resources :favorites
+
+
+  resources :issues do
+  resources :buses
+
+end
+
 end
 
   

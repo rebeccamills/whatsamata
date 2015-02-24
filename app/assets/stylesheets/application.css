@@ -13,13 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+
+
 body {
  	text-align: center;
  	width: 100%;
  	font-family: "Avenir";
  	margin: 0;
  	padding: 0;
- 	background: #CFECEC;
+ 	background: #E5E4E2;
  }
 
+
+ .banner {
+  background-color: #3D3C3A;
+  height: 100px;
+  padding-top: 20px;
+}
+
+h1 {
+	color: white;
+}
 

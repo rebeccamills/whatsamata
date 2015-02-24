@@ -22,39 +22,39 @@ var form = $('#search');
 var query = $('#search-name');
 var result = $("#results");
 
-form.on("submit", search);
+// form.on("submit", search);
 
 
-function search(e){
-  e.preventDefault();
+function search(){
+  // e.preventDefault();
 
-  var busroutesSearchUrl = baseUrl + '/api.wmata.com/Bus.svc/json/jRoutes?api_key=' + apikey + '&page_limit=100';
+  var busroutesSearchUrl = baseUrl + '/Bus.svc/json/jRoutes?api_key=' + apikey + '&page_limit=100';
 
   $.ajax({
     url: busroutesSearchUrl,
     dataType: "jsonp",
-    success: function(parsed_json){
-      var busroute = parsed_json["Routes"]["Name"]
-      var routeID = parsed_json["Routes"]["RouteID"]
-      console.log(busroute, routeID);
+    success: function(parsed_json){ 
+        var obj = parsed_json.Routes
+        for (var i=0; i < obj.length; i++){
+          // console.log(obj[i]["Name"])
+          var result = (obj[i]["Name"])
+          console.log(obj)
+          $("#busdropdown").append("<option>" + obj[i]["Name"] + "</option>")
+          // console.log(obj[i]["RouteID"])
+        }
+      // console.log(parsed_json.Routes);
+      var test = parsed_json.Routes;
+      // console.log(test[0]["Name"]);
 
     }
   });
+
 }
 
+search();
 
 
-//  $(".submit_buttons").on("submit",function(event){
-//   event.preventDefault();
-//   busroute_id = this.firstChild.getAttribute("id");
-//   console.log(busroute_id);
- 
 
-//   $.ajax({
-//     type: "POST",
-//     url: "/routes/",
-//     data: {busroute_id: busroute_id}
-    
-//   });
 
-// });
+
+

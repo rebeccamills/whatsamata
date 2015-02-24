@@ -1,5 +1,6 @@
 class IssuesController < ApplicationController
   def index
+    @issue = Issue.new
     @issues = Issue.all
   end
 
@@ -9,7 +10,15 @@ class IssuesController < ApplicationController
 
   def new
     @issue = Issue.new
+    # @issues = issue.where route is route
+    # @issues = params[:bus_id]
+    @issues = Issue.all
+    #add routes column to issues table
   end
+
+
+
+
 
   def edit
     @issue = Issue.find(params[:id])
@@ -18,8 +27,11 @@ class IssuesController < ApplicationController
   def create
     @issue = Issue.new(issue_params)
 
-    @issue.save
-    redirect_to @issue
+    if @issue.save
+      redirect_to issues_path
+    else
+      render 'new'
+    end
   end
 
   def update
