@@ -1,4 +1,4 @@
-WhatsaMATA
+<h1>WhatsaMATA</h1>
 
 An app for riders of Washington Metro Area Transit Authority (WMATA) buses to submit issues about bus routes. 
 
