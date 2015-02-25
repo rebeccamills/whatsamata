@@ -1,9 +1,16 @@
 <!-- put checkbox here -->
-<button id="favoritesbutton">Favorite this route</button>
 
-<%= button_to("Add to Favorites" :action => "create", :controller => "favorites" %>
+<%#= button_to("Add to Favorites" :action => "create", :controller => "favorites" %>
 
+<%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
+  
+  <select name="route" id="favoritesdropdown">
+    <option value="">Favorites</option>
 
+  </select>
+  
+  <%= f.submit "Save as favorite" %>
+<% end %>
 
 
 

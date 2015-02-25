@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
 
   def index
     # a GET request that returns a JSON for every favorite object belonging to that user
-    
+    @favoritee = Favorite.new
   end
 
   def create

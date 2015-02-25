@@ -11,6 +11,24 @@
   
   <%= f.submit "Submit an issue" %>
 <% end %>
+
+
+
+<%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
+  
+  <select name="route" id="favoritesdropdown">
+    <option value="">Favorites</option>
+
+  </select>
+  
+  <%= f.submit "Submit an issue" %>
+<% end %>
+
+
+
+
+
+
 <p>
  
 <table class="issuetable">

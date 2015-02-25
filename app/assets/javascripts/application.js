@@ -49,7 +49,7 @@ function search(){
     }
   });
 
-  $("favoritesbutton").onClick
+  // $("favoritesbutton").on('click', function )
 
 }
 
