@@ -61,9 +61,19 @@ th {
 	color: white;
 }
 
-/*.width {
-	max-width: 200px;
-}*/
+td {
+	word-wrap: break-word;
+	max-width: 300px;
+}
+
+html, body {
+    width: 100%;
+}
+table {
+    margin: 0 auto;
+}
+
+
 
 
 
