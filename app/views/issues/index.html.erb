@@ -2,25 +2,38 @@
 
 <h2>Rider issues</h2>
  
+<%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
+  
+  <select name="route" id="busdropdown">
+    <option value="">Choose Your Route</option>
+
+  </select>
+  
+  <%= f.submit "Submit an issue" %>
+<% end %>
+<p>
  
-<table>
+<table class="issuetable">
   <tr>
+    <th>Bus Route</th>
     <th>Issue</th>
     <th>Summary</th>
-    <th>Manage</th>
+    
      <th colspan="3"></th>
   </tr>
  
   <% @issues.each do |issue| %>
     <tr>
-      <td><%= issue.title %></td>
-      <td><%= issue.text %></td>
+      <td><%= issue.route %></td>
+      <td class="width"><%= issue.title %></td>
+      <td class="width"><%= issue.text %></td>
       <td><%= link_to 'Show', issue_path(issue) %></td>
       <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
       <td><%= link_to 'Destroy', issue_path(issue),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
+  </p>
   <% end %>
 </table>
 

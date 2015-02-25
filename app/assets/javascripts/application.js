@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-var apikey = "kfgpmgvfgacx98de9q3xazww";
+var apikey = "91caca06ccb34f2eb2aa7451ed608288";
 var baseUrl = "https://api.wmata.com";
 var form = $('#search');
 var query = $('#search-name');
@@ -38,7 +38,7 @@ function search(){
         for (var i=0; i < obj.length; i++){
           // console.log(obj[i]["Name"])
           var result = (obj[i]["Name"])
-          console.log(obj)
+          // console.log(routes)
           $("#busdropdown").append("<option>" + obj[i]["Name"] + "</option>")
           // console.log(obj[i]["RouteID"])
         }

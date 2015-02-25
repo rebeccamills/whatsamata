@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150224191430) do
   add_index "buses", ["issue_id"], name: "index_buses_on_issue_id"
 
   create_table "favorites", force: :cascade do |t|
-    t.string   "favorite"
+    t.string   "busroute"
     t.text     "body"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 20150224191430) do
   create_table "issues", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
+    t.string   "route"
+    t.integer  "user_id"
+    t.integer  "bus_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

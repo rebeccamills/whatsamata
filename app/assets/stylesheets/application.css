@@ -26,6 +26,7 @@ body {
  }
 
 
+
  .banner {
   background-color: #3D3C3A;
   height: 100px;
@@ -35,4 +36,34 @@ body {
 h1 {
 	color: white;
 }
+
+/*td {
+	background-color: #B4CFEC;
+
+}*/
+
+.issuetable td{
+	padding: 7px; border: white 1px solid;
+}
+
+.issuetable tr:nth-child(odd){
+	background-color: #E5E4E2;
+	/*border: white 1 px solid;*/
+	
+}
+
+.issuetable tr:nth-child(even){
+	background-color: #BCC6CC;
+}
+
+th {
+	background-color: #3D3C3A;
+	color: white;
+}
+
+/*.width {
+	max-width: 200px;
+}*/
+
+
 

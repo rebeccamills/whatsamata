@@ -10,14 +10,9 @@ class IssuesController < ApplicationController
 
   def new
     @issue = Issue.new
-    # @issues = issue.where route is route
-    # @issues = params[:bus_id]
-    @issues = Issue.all
-    #add routes column to issues table
+    @issues = Issue.where(route: params[:route])
+    # @issues = Issue.all
   end
-
-
-
 
 
   def edit
@@ -51,7 +46,7 @@ class IssuesController < ApplicationController
 
   private
   def issue_params
-    params.require(:issue).permit(:title, :text)
+    params.require(:issue).permit(:title, :text, :route)
   end
 end
 

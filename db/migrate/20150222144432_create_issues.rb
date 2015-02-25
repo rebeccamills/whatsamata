@@ -3,6 +3,7 @@ class CreateIssues < ActiveRecord::Migration
     create_table :issues do |t|
       t.string :title
       t.text :text
+      t.string :route
       t.integer :user_id
       t.integer :bus_id
 
