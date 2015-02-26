@@ -1,4 +1,5 @@
 class BusesController < ApplicationController
+	include HTTParty
 	
 	def new
     	@bus = Bus.find_or_create_by(bus_id: bus_id)
@@ -6,10 +7,14 @@ class BusesController < ApplicationController
 
   	def api
   		@api_key = ENV["api_key"]
-  		render :json => {api_key:@api_key}
+  		@url = HTTParty.get("https://api.wmata.com/Bus.svc/json/jRoutes?api_key=#{@api_key}")
+  		render :json => {url: @url}
+  	
   	end
 
 end
+
+
 
 
 

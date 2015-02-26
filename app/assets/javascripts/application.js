@@ -16,48 +16,35 @@
 //= require_tree .
 
 
-//var apikey = "91caca06ccb34f2eb2aa7451ed608288";
-var baseUrl = "https://api.wmata.com";
+
 var form = $('#search');
 var query = $('#search-name');
 var result = $("#results");
 
-$.ajax({
-  url: "/busroutes", 
-  success: function(result){
-    console.log(result)
-  }
-})
+
+function search(){
 
 
 
-// //function search(){
-//   // e.preventDefault();
-
-//   var busroutesSearchUrl = baseUrl + '/Bus.svc/json/jRoutes?api_key=' + apikey + '&page_limit=100';
-
-//   $.ajax({
-//     url: busroutesSearchUrl,
-//     dataType: "jsonp",
-//     success: function(parsed_json){ 
-//         var obj = parsed_json.Routes
-//         for (var i=0; i < obj.length; i++){
-//           var result = (obj[i]["Name"])
-//           $("#busdropdown").append("<option>" + obj[i]["Name"] + "</option>")
-//           // console.log(obj[i]["RouteID"])
-//         }
-//       var test = parsed_json.Routes;
-
-
+  $.ajax({
+    url: "/busroutes",
+    success: function(parsed_json){ 
      
+        var obj = parsed_json.url.Routes
+        for (var i=0; i < obj.length; i++){
+          var result = (obj[i]["Name"])
+          $("#busdropdown").append("<option>" + obj[i]["Name"] + "</option>")
+          // console.log(obj[i]["RouteID"])
+        }
+      var test = parsed_json.Routes;
 
-//     }
-//   });
+    }
+  });
 
 
-// }
+}
 
-// search();
+search();
 
 
 
