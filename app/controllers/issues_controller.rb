@@ -1,4 +1,7 @@
 class IssuesController < ApplicationController
+  before_action :authenticate_user!
+
+
   def index
     @issue = Issue.new
     @issues = Issue.all
@@ -47,7 +50,7 @@ class IssuesController < ApplicationController
 
   private
   def issue_params
-    params.require(:issue).permit(:title, :text, :route)
+    params.require(:issue).permit(:title, :text, :route, :user_id)
   end
 end
 

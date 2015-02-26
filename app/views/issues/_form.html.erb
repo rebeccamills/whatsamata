@@ -17,6 +17,8 @@
    
     <%= f.hidden_field :route, :value => params[:route] %>
 
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
 
   <p>
     <%= f.label :title %><br>
@@ -31,6 +33,9 @@
   <p>
     <%= f.submit %>
   </p>
+  <p>
+<%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+</p>
 
 
  
