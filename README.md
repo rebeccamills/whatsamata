@@ -21,9 +21,13 @@ An app for riders of Washington Metro Area Transit Authority (WMATA) buses to su
 
 <h4>Technologies used:</h4>
 <ul>
-<li>Ruby on Rails</li>
+<li>Ruby 2.1.2</li>
+<li>Rails</li>
+<li>User authentication with Devise gem</li>
 <li>JavaScript</li>
 <li>jQuery</li>
 <li>JSON</li>
+<li>WMATA API</li>
 <li>AJAX</li>
+<li>CSS</li>
 
