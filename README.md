@@ -2,7 +2,7 @@
 
 An app for riders of Washington Metro Area Transit Authority (WMATA) buses to submit issues about bus routes. 
 
-<h3>User Stories:</h3>
+<h4>User Stories:</h4>
 <ul>
 <li>Users can sign up</li>
 <li>Users can log in</li>
@@ -11,14 +11,15 @@ An app for riders of Washington Metro Area Transit Authority (WMATA) buses to su
 <li>Users can view reports on all bus routes submitted by other users</li>
 <li>Users can view reports on specific bus routes submitted by other users</li>
 <li>Users can favorite bus routes and access them in the future via a dropdown list</li>
+</ul>
 
-<h3>Wireframes:</h3>
+<h4>Wireframes:</h4>
 <p>http://www.gliffy.com/go/publish/image/7299503/L.png</p>
 
-<h3>ERD:</h3>
+<h4>ERD:</h4>
 <p>http://www.gliffy.com/go/publish/image/7341645/L.png</p>
 
-<h3>Technologies used:</h3>
+<h4>Technologies used:</h4>
 <ul>
 <li>Ruby on Rails</li>
 <li>JavaScript</li>
