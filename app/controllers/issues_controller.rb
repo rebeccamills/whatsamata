@@ -11,7 +11,8 @@ class IssuesController < ApplicationController
   def new
     @issue = Issue.new
     @issues = Issue.where(route: params[:route])
-    # @issues = Issue.all
+    @favorite = Favorite.new
+    @favorite.busroute = params[:route]
   end
 
 
@@ -49,57 +50,4 @@ class IssuesController < ApplicationController
     params.require(:issue).permit(:title, :text, :route)
   end
 end
-
-
-
-# class IssuesController < ApplicationController
-#   def index
-#     @issues = Issue.all
-#   end
-
-
-#   def show
-#     @issue = Issue.find(params[:id])
-#   end
-
-
-#   def new
-#   	@issue = Issue.new
-#   end
-
-#   def edit
-#   	@issue = Issue.find(params[:id])
-#   end
-
-
-# def create
-#   @issue = Issue.new(issue_params)
- 
-#   @issue.save
-#   redirect_to @issue
-# end
-
-# def update
-#   @issue = Issue.find(params[:id])
-#   if @issue.update_attributes(issue_params)
-#     redirect_to @issue
-#   else
-#     render 'edit'
-#   end
-# end
-
-# def destroy
-#   @issue = Issue.find(params[:id])
-#   @issue.destroy
- 
-#   redirect_to issues_path
-# end
- 
-# private
-#   def issue_params
-#     params.require(:issue).permit(:title, :text)
-#   end
-# end
-
-
 

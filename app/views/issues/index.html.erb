@@ -1,32 +1,25 @@
-
-
 <h2>Rider issues</h2>
+
+
+
  
 <%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
-  
   <select name="route" id="busdropdown">
     <option value="">Choose Your Route</option>
-
   </select>
-  
   <%= f.submit "Submit an issue" %>
 <% end %>
-
 
 
 <%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
-  
   <select name="route" id="favoritesdropdown">
     <option value="">Favorites</option>
-
+    <% current_user.favorites.each do |favorite| %>
+    <option><%= favorite.busroute %></option>
+  <% end %>
   </select>
-  
   <%= f.submit "Submit an issue" %>
 <% end %>
-
-
-
-
 
 
 <p>

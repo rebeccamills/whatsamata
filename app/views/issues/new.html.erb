@@ -1,13 +1,9 @@
 <h2>New Issue</h2>
 
-
-
-<%= form_for @issue do |f| %>
-<!-- hidden field with current route id; handle redirection in controller -->
+<%= form_for @favorite do |f| %>
+  <%= f.text_field :busroute %>
   <%= f.submit "Save this route as a favorite" %>
 <% end %>
-
-
 
 
 <%= render 'form' %>
@@ -32,7 +28,6 @@
     </tr>
   <% end %>
 </table>
-
 
 
  

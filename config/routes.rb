@@ -8,10 +8,10 @@ Rails.application.routes.draw do
 
 
   resources :users
-  
-
-  resources :users do
   resources :favorites
+
+  # resources :users do
+  # resources :favorites
 
 
   resources :issues do
@@ -19,7 +19,11 @@ Rails.application.routes.draw do
 
 end
 
+get "/busroutes", to: "buses#api"
 end
+
+  
+
 
   
 
@@ -76,4 +80,4 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
