@@ -41,7 +41,7 @@
       <td class="width"><%= issue.title %></td>
       <td class="width"><%= issue.text %></td>
       <td><%= link_to 'Show', issue_path(issue) %></td>
-      <% if current_user %>
+      <% if issue.user == current_user %>
       <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
       <td><%= link_to 'Destroy', issue_path(issue),
               method: :delete,
