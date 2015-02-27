@@ -32,7 +32,7 @@ An app for riders of Washington Metro Area Transit Authority (WMATA) buses to su
 <li>CSS</li>
 </ul>
 
-<h6>To do:</h6>
+<h5>To do:</h5>
 <ul>
 <li>Refactor</li>
 <li>Responsiveness for mobile devices</li>
