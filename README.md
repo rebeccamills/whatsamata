@@ -30,6 +30,7 @@ An app for riders of Washington Metro Area Transit Authority (WMATA) buses to su
 <li>WMATA API</li>
 <li>AJAX</li>
 <li>CSS</li>
+</ul>
 
 <h5>To do:</h5>
 <ul>
