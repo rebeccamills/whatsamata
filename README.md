@@ -1,6 +1,6 @@
 <h2>WhatsaMATA</h2>
 
-An app for riders of Washington Metro Area Transit Authority (WMATA) buses to submit issues about bus routes. 
+An app for riders of Washington Metro Area Transit Authority (WMATA) buses to submit issues about bus routes. WhatsaMATA with WMATA?
 
 <h4>User Stories:</h4>
 <ul>
