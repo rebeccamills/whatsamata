@@ -37,6 +37,6 @@ An app for riders of Washington Metro Area Transit Authority (WMATA) buses to su
 <li>Refactor</li>
 <li>Responsiveness for mobile devices</li>
 <li>Time and datestamps for user submissions</li>
-<li>Show username?</li>
+<li>Show username/authentication with Twitter and/or Facebook</li>
 <li>Include bus stop info</li>
 </ul>
