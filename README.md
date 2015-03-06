@@ -42,4 +42,5 @@ An app for riders of Washington Metro Area Transit Authority (WMATA) buses to su
 <li>Allow users to view submissions without logging in</li>
 <li>System feedback for the Favorite button</li>
 <li>Adding a Metro Alerts scroll?</li>
+<li>Link Bus Routes in table</li>
 </ul>
