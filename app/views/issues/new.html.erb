@@ -20,9 +20,9 @@
       <td><%= issue.route %></td>
       <td class="width"><%= issue.title %></td>
       <td class="width"><%= issue.text %></td>
-      <td><%= link_to 'Show', issue_path(issue) %></td>
+      <td><%= link_to 'View', issue_path(issue) %></td>
       <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
-      <td><%= link_to 'Destroy', issue_path(issue),
+      <td><%= link_to 'Delete', issue_path(issue),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
