@@ -2,7 +2,10 @@
 
 <%= form_for @favorite do |f| %>
   <%= f.text_field :busroute %>
-  <%= f.submit "Save this route as a favorite" %>
+  <%= f.submit "Save this route as a favorite", :class => "button", :onclick => "alert('Route favorited')" %>
+ 
+
+
 <% end %>
 
 
