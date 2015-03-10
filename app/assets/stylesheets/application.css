@@ -50,6 +50,10 @@ h1 a {
 	margin-bottom: 20px;
 }
 
+table {
+	margin-bottom: 20px;
+}
+
 .issuetable tr:nth-child(odd){
 	background-color: #E5E4E2;
 	/*border: white 1 px solid;*/
