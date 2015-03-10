@@ -36,7 +36,8 @@
     <tr>
       <td><%= issue.route %></td>
       <td class="width"><%= issue.title %></td>
-      <td class="width"><%= issue.text %></td>
+      <td class="width"><%= issue.text %> <br><%= issue.created_at.strftime("posted on %B %d at %I:%M %p") %></td>
+
       <td><%= link_to 'View', issue_path(issue) %></td>
       <% if issue.user == current_user %>
       <td><%= link_to 'Edit', edit_issue_path(issue) %></td>

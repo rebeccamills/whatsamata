@@ -50,7 +50,7 @@ class IssuesController < ApplicationController
 
   private
   def issue_params
-    params.require(:issue).permit(:title, :text, :route, :user_id)
+    params.require(:issue).permit(:title, :text, :route, :user_id, :timestamp)
   end
 end
 
