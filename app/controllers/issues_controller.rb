@@ -4,7 +4,7 @@ class IssuesController < ApplicationController
 
   def index
     @issue = Issue.new
-    @issues = Issue.all
+    @issues = Issue.all.order("created_at desc").each 
   end
 
   def show

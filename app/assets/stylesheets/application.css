@@ -33,8 +33,10 @@ body {
   padding-top: 20px;
 }
 
-h1 {
+h1 a {
 	color: white;
+	text-decoration: none;
+	
 }
 
 /*td {
@@ -44,6 +46,7 @@ h1 {
 
 .issuetable td{
 	padding: 7px; border: white 1px solid;
+	padding-bottom: 20px;
 }
 
 .issuetable tr:nth-child(odd){
@@ -71,6 +74,17 @@ html, body {
 }
 table {
     margin: 0 auto;
+}
+
+
+@media all and (min-width: 768px)  {
+    .projects article {
+        max-width: 33.333%;
+    }
+    i {
+        padding: 3px;
+    }
+   
 }
 
 

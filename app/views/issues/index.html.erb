@@ -1,7 +1,4 @@
 <h2>Rider issues</h2>
-
-
-
  
 <%= form_for @issue, method: "GET", url: new_issue_path do |f| %>
   <select name="route" id="busdropdown">
@@ -21,7 +18,7 @@
   <%= f.submit "Submit an issue" %>
 <% end %>
 <p>
-<%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+<button><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></button>
 </p>
 
 <p>
@@ -46,6 +43,7 @@
       <td><%= link_to 'Destroy', issue_path(issue),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+              <% else %><td colspan="3"> </td> 
               <% end %>
     </tr>
   </p>
