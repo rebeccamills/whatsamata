@@ -10,10 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-
-
+ *= require_tree .
+ *= require_self
  */
-
 
 
 
@@ -23,42 +22,60 @@ body {
  	font-family: "Avenir";
  	margin: 0;
  	padding: 0;
- 	background: #E5E4E2;
+ 	background:  #B1C0C7;
  }
 
 
 
  .banner {
-  background-color: #3D3C3A;
-  height: 100px;
-  padding-top: 20px;
+  	background: url('wmatabus4.jpg') no-repeat;
+  	background-color: #3D3C3A;
+  	height: 100px;
+  	padding-top: 20px;
 }
 
-h1 {
-	color: white;
+.textbackground {
+	width: 400px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.3);
+
 }
 
-/*td {
-	background-color: #B4CFEC;
+h1  {
+	color: yellow;
+	text-decoration: none;
+	font-size: 60px;
+	margin-bottom: 20px;
+}
 
-}*/
+h2 {
+	color: #0E258F;
+}
+
+
 
 .issuetable td{
 	padding: 7px; border: white 1px solid;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+table {
+	margin-bottom: 20px;
 }
 
 .issuetable tr:nth-child(odd){
-	background-color: #E5E4E2;
-	/*border: white 1 px solid;*/
+	background-color: #95B9C7;
+	border: white 1 px solid;
 	
 }
 
 .issuetable tr:nth-child(even){
-	background-color: #BCC6CC;
+	background-color: #F0F8FF;
 }
 
 th {
-	background-color: #3D3C3A;
+	background-color: #0E258F;
 	color: white;
 }
 
@@ -67,11 +84,23 @@ td {
 	max-width: 300px;
 }
 
+
 html, body {
     width: 100%;
 }
 table {
     margin: 0 auto;
+}
+
+
+@media all and (min-width: 768px)  {
+    .issuetable {
+        max-width: 33.333%;
+    }
+    i {
+        padding: 3px;
+    }
+   
 }
 
 
