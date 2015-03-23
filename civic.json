@@ -1,0 +1,34 @@
+{
+    "conformsTo": "http://codefordc.org/resources/specification.html",
+    "status": "Alpha",
+    "thumbnailUrl": "https://whatsamata.herokuapp.com/",
+    "contact": {
+        "name": "WhatsaMATA",
+        "email": "RebeccaMillsDC@gmail.com",
+        "twitter": "@RebeccaMillsDC"
+    },
+    "bornAt": "Web Development Immersive 4, General Assembly",
+    "geography": "Washington, DC",
+    "politicalEntity": {},
+    "governmentPartner": {},
+    "communityPartner": {},
+    "type": "Web App",
+    "data": {},
+    "needs": [
+        {
+            "need": "Responsiveness"
+        },
+        {
+            "need": "User authentication with Twitter/Facebook"
+        },
+        {
+            "need": "Integrating a bus stop list from WMATA's API"
+        }
+    ],
+    "categories": [
+        {
+            "category": "Transportation"
+        }
+    ],
+    "moreInfo": ""
+}
